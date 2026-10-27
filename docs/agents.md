@@ -9,6 +9,10 @@ three ways — pick whichever fits the agent:
 | **MCP** | Claude and other MCP clients; images of pages and the window come back as content | `designcraft-cli mcp` ([mcp.md](mcp.md)) |
 | **Control channel** | Your own client driving the running app (JSON lines over TCP) | `designcraft --control 7979` ([control-protocol.md](control-protocol.md)) |
 
+## Ray AI panel in the desktop app
+
+The Ray-branded desktop build opens an AI panel from the app. It uses the user's local Codex, Claude Code, or Gemini CLI login; no provider credentials are stored in the document or sent through Remora. The panel previews the current document context and requests consent for each document before sending it to a selected provider. Suggested commands are reviewed before Apply, and Undo uses the app's command history. Provider authentication, quota and connectivity errors appear in the panel. The panel does not run shell commands from model output.
+
 ## Discover commands
 
 ```sh

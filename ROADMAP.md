@@ -643,6 +643,7 @@ Newest first.
 
 | Date | Change | Summary |
 |---|---|---|
+| 2026-10-27 | minor | Ray desktop AI panel for local Codex, Claude Code and Gemini CLI accounts, with per-document consent, context preview, reviewed Apply and Undo; no readiness percentage change |
 | 2026-10-12 | minor | Manual text threading landed; alpha distance 15–25 h → 5–7 h (Primary Text Frame page fixes, #165) |
 | 2026-10-11 | minor | Localized Japanese print, import and table controls; readiness estimates unchanged |
 | 2026-10-10 | minor | Full number 42% → 47% (method aligned with the standard: plain weighted sum, no new evidence); readiness table with hours per audience |

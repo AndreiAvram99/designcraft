@@ -24,6 +24,8 @@ mod object_control;
 mod panel_docking;
 pub mod panels;
 mod prefs;
+#[cfg(not(target_arch = "wasm32"))]
+mod ray_ai_console;
 pub mod render_worker;
 mod rtl;
 mod section_options;
@@ -1605,6 +1607,11 @@ impl DesignApp {
         dialogs::show(self, &ctx);
         about::show(self, &ctx);
         menus::palette(self, &ctx);
+        #[cfg(not(target_arch = "wasm32"))]
+        {
+            ray_ai_console::launcher(&ctx);
+            ray_ai_console::show(self, &ctx);
+        }
         if self.custom_titlebar {
             chrome::resize_borders(self, ui);
         }

@@ -38,6 +38,10 @@ const ALLOWED: &[(&str, &str)] = &[
         "mcp/src/tools.rs",
         "`screenshot` reads back the PNG the connected app just wrote. Connected mode cannot be combined with the roots (the CLI refuses the pair), and the app's own engine checks the path it writes",
     ),
+    (
+        "ui-egui/src/ray_ai_console.rs",
+        "only checks whether fixed official CLI executable names exist in PATH before launching a user-approved AI request; no document or command path is probed",
+    ),
 ];
 
 fn rust_files(dir: &Path, files: &mut Vec<PathBuf>) {
